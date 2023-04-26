@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 import { ByCapitalPageComponent } from './pages/by-capital-page/by-capital-page.component';
 import { ByCountryPageComponent } from './pages/by-country-page/by-country-page.component';
