@@ -38,11 +38,11 @@
     </div>
   </div>
 
-  <div class="row-mt12">
+  <div class="row">
     <div class="col">
         <h3>Traducciones</h3>
         <div class="d-flex flex-wrap">
-            <div *ngFor="let element of translations" class="translation badge bg-primary m-1">{{element.common}}</div>
+            <div *ngFor="let element of translations" class="translation badge bg-primary m-1">{{element[0]}} - {{element[1].common}}</div>
         </div>
     </div>
   </div>
