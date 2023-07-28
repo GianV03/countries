@@ -3,6 +3,10 @@
     color:#333333;
 }
 
+.margin-top{
+    margin-top: 3rem;
+}
+
 .translation:hover{
     cursor:pointer;
 }

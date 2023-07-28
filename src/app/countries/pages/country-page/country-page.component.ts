@@ -25,7 +25,7 @@ export class CountryPageComponent implements OnInit {
       (country)=>{
         if(!country) return this.router.navigateByUrl('');
         this.translations = Object.entries(country.translations);
-        console.log(this.translations[0])
+        console.log(country)
         return this.country = country;
     }
     )
