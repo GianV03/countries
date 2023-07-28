@@ -5,6 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sidebar.component.html',
   styles: [
     `
+    .sidebar-container{
+      background-color:black;
+    }
     li:hover{
       cursor:pointer
     }

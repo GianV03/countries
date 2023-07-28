@@ -1,1 +1,52 @@
-<p>country-page works!</p>
+<ng-template #loading>
+    <div class="alert alert-info">Realizando busqueda...</div>  
+</ng-template>
+
+<div *ngIf="country; else loading">
+  <div class="row">
+    <div class="col-12">
+      <h2>
+        País: <strong><a class="google-maps-link" [href]="country.maps.googleMaps" target="_blank">{{ country.name.common }}</a></strong>
+      </h2>
+    </div>
+  </div>
+  <hr />
+  <div class="row">
+    <div class="col-4">
+      <h3>Bandera</h3>
+      <img [src]="country.flags.png" />
+    </div>
+    <div class="col">
+      <h3>Información</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Capital: </strong> {{ country.capital }}
+        </li>
+        <li class="list-group-item">
+          <strong>Población: </strong> {{ country.population }}
+        </li>
+        <li class="list-group-item">
+            <strong>Idioma: </strong> {{ country.languages.spa }}
+          </li>
+        <li class="list-group-item">
+          <strong>Código: </strong> {{ country.cca3 }}
+        </li>
+        <li class="list-group-item">
+          <strong>Región: </strong> {{ country.region }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row-mt12">
+    <div class="col">
+        <h3>Traducciones</h3>
+        <div class="d-flex flex-wrap">
+            <div *ngFor="let element of translations" class="translation badge bg-primary m-1">{{element.common}}</div>
+        </div>
+    </div>
+  </div>
+  <div class="col">
+    <iframe [src]="country.maps.googleMaps" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>

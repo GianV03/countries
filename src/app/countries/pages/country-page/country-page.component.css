@@ -1,0 +1,8 @@
+.google-maps-link{
+    text-decoration: none;
+    color:#333333;
+}
+
+.translation:hover{
+    cursor:pointer;
+}
